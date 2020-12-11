@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tv=['Sony','mi','Samsung','LG'];
+        var laptop=['Lenovo','HP','MAC','dell'];
+        var mobile=['redmi','REALME','samsung','honor'];
+        var name= prompt(<--select-->);
+        
+        function Userinp(){
+            choice= document.getElementById("choice").value;
+            var mydiv=document.getElementById("mydiv");
+            mydiv.innerHTML =' Welcome to Store<br>';
+        switch(choice){
+            case 'laptop':
+                    laptop.forEach(function(element) {
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+                    break;
+              case 'tv':
+                    tv.forEach(function(element){
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+                    break; 
+            case 'mobile':
+                    mobile.forEach(function(element){
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+        } 
+                          
+        }
+    </script>
+</head>
+<body>
+    <select onchange= 'Userinp()' id="choice">
+     <option value="laptop">LAPTOP</option>
+     <option value="TV">TV</option>
+     <option value="mobile">MOBILE</option>
+      
+    </select>
+    <div id ="myid" style="background-color:red;"></div>
+    
+</body>
+</html>

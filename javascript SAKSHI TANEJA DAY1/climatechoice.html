@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var rainy=['drinktea','samosa'];
+        var summer=['eaticecream','goforswimming'];
+        var winter=['drinkhotsoup','sleep'];
+        var windy=['enjoycycling','kiteflying'];
+        function Userchoice(){
+            choice= document.getElementById("choice").value;
+            var mydiv=document.getElementById("mydiv");
+        mydiv.innerHTML =' Welcome to Seasons<br>';
+        switch(choice){
+            case 'rainy':
+                    rainy.forEach(function(element) {
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+                    break;
+              case 'summer':
+                    summer.forEach(function(element){
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+                    break; 
+            case 'winter':
+                    winter.forEach(function(element){
+                       mydiv.innerHTML+=element+"<br>";
+                    });
+                    break;   
+            case 'windy':
+                  windy.forEach(function(element){
+                      mydiv.innerHTML+=element+"<br>";
+                  });
+                                    
+        }
+    </script>
+</head>
+<body>
+    <select onchange= 'Userchoice()' id="choice">
+     <option value="rainy">rainy</option>
+     <option value="summer">summer</option>
+     <option value="winter">winter</option>
+     <option value="windy">windy</option>   
+    </select>
+    <div id ="myid" style="background-color: bisque;"></div>
+    
+</body>
+</html>
